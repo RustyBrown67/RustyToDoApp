@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Constants.swift
 //  RustyToDoApp
 //
 //  Created by Russell Brown on 17/12/2017.
@@ -8,7 +8,3 @@
 
 import Foundation
 
-class Item: Codable {
-    var title: String = ""
-    var done: Bool = false
-}
