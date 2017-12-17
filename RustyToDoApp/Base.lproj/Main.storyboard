@@ -31,7 +31,14 @@
                             <outlet property="delegate" destination="ScF-uC-bwR" id="KlP-Cp-62b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Rusty's To Do App" id="rei-Mc-6GS"/>
+                    <navigationItem key="navigationItem" title="Rusty's To Do App" id="rei-Mc-6GS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bVv-0a-dDf">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addBtnPressed:" destination="ScF-uC-bwR" id="zKd-aJ-2t5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YE-X1-AnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,7 @@ import UIKit
 
 class ToDoListVC: UITableViewController {
 
-    let itemArray = ["Hemswell Snag List", "Costing Engineers", "Shopping List"]
+    var itemArray = ["Hemswell Snag List", "Costing Engineers", "Shopping List"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,31 @@ class ToDoListVC: UITableViewController {
         
     }
     
+    //MARK - Add New Items
+    
+    @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New To Do Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            if textField.text == "" {
+                //do nothing as we don't want an empty cell
+            } else {
+                self.itemArray.append(textField.text!)
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
 
 
