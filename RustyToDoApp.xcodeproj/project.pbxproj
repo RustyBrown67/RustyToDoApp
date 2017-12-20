@@ -15,6 +15,7 @@
 		1874D9841FE6D953006586FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874D9831FE6D953006586FA /* Constants.swift */; };
 		1874D9871FE7022D006586FA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1874D9851FE7022D006586FA /* DataModel.xcdatamodeld */; };
 		18A6C58B1FE9C2F600587B53 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6C58A1FE9C2F600587B53 /* CategoryVC.swift */; };
+		60A43C4E27D0B290A4B4B272 /* Pods_RustyToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E69AF3B0F2DBD7607EED1C /* Pods_RustyToDoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		1874D9831FE6D953006586FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1874D9861FE7022D006586FA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		18A6C58A1FE9C2F600587B53 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		76E69AF3B0F2DBD7607EED1C /* Pods_RustyToDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RustyToDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC38314A1310E0D840860624 /* Pods-RustyToDoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RustyToDoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RustyToDoApp/Pods-RustyToDoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DE80937A0B858706554718AE /* Pods-RustyToDoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RustyToDoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RustyToDoApp/Pods-RustyToDoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A43C4E27D0B290A4B4B272 /* Pods_RustyToDoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1984C0E710F0CF0EA28C39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76E69AF3B0F2DBD7607EED1C /* Pods_RustyToDoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1874D95F1FE67A1F006586FA = {
 			isa = PBXGroup;
 			children = (
 				1874D96A1FE67A1F006586FA /* RustyToDoApp */,
 				1874D9691FE67A1F006586FA /* Products */,
+				1F5AC158BD805051AF48C913 /* Pods */,
+				0F1984C0E710F0CF0EA28C39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +120,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1F5AC158BD805051AF48C913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC38314A1310E0D840860624 /* Pods-RustyToDoApp.debug.xcconfig */,
+				DE80937A0B858706554718AE /* Pods-RustyToDoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1874D97A1FE67A1F006586FA /* Build configuration list for PBXNativeTarget "RustyToDoApp" */;
 			buildPhases = (
+				AB023F2046B85393C726241A /* [CP] Check Pods Manifest.lock */,
 				1874D9641FE67A1F006586FA /* Sources */,
 				1874D9651FE67A1F006586FA /* Frameworks */,
 				1874D9661FE67A1F006586FA /* Resources */,
+				E4D0F0878EAD3097C76EB22F /* [CP] Embed Pods Frameworks */,
+				DC73DFCEBB1C64E98174633C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB023F2046B85393C726241A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RustyToDoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC73DFCEBB1C64E98174633C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RustyToDoApp/Pods-RustyToDoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D0F0878EAD3097C76EB22F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RustyToDoApp/Pods-RustyToDoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RustyToDoApp/Pods-RustyToDoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1874D9641FE67A1F006586FA /* Sources */ = {
@@ -316,6 +399,7 @@
 		};
 		1874D97B1FE67A1F006586FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC38314A1310E0D840860624 /* Pods-RustyToDoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +415,7 @@
 		};
 		1874D97C1FE67A1F006586FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE80937A0B858706554718AE /* Pods-RustyToDoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
